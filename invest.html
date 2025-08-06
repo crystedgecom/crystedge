@@ -1,0 +1,185 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invest with CrystEdge</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="crystedge.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo-group">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <div class="logo-text">
+        <div class="brand-name">CRYSTEDGE</div>
+        <div class="brand-sub">INVESTMENTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#strategy">Strategy</a>
+      <a href="login.html" class="btn login-btn">Login</a>
+    </nav>
+  </div>
+</header>
+<!-- Invest Section -->
+<section class="invest" id="invest">
+  <div class="container">
+    <h2 data-aos="fade-up">Invest With CrystEdge</h2>
+    <p class="invest-intro" data-aos="fade-up" data-aos-delay="100">
+      Become a shareholder in Ethiopia’s first hedge fund. When you invest with CrystEdge, you earn equity in a global financial company with real performance and strong governance.
+    </p>
+
+    <div class="invest-steps">
+      <div class="step" data-aos="fade-right" data-aos-delay="200">
+        <h3>Step 1: Review Proposal</h3>
+        <p>Understand our strategy, risk management, and expected returns from our official hedge fund proposal.</p>
+        <a href="crystedge investments proposal.pdf" class="btn outline" download>Download Proposal</a>
+      </div>
+
+      <div class="step" data-aos="fade-right" data-aos-delay="300">
+        <h3>Step 2: Fill Investor Form</h3>
+        <p>Submit your details and desired investment amount.</p>
+        <form class="invest-form" action="https://formspree.io/f/xnnzbkgn" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="number" id="amount" name="amount" placeholder="Investment Amount (ETB) 1000-369,000" required>
+          <textarea name="message" placeholder="Your Message or Questions"></textarea>
+          <button type="submit" class="btn gold">Submit Application</button>
+        </form>
+
+      </div>
+      <div class="step" data-aos="fade-right" data-aos-delay="400">
+        <h3>Step 3: Get Approved</h3>
+        <p>Our team will review and reach out with confirmation, onboarding steps, and access to our investor dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 CrystEdge Investments. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
+
+<script>
+function validateForm() {
+  const amount = parseInt(document.getElementById("amount").value);
+  if (amount < 1000 || amount > 369369) {
+    alert("Investment amount must be between 1,000 ETB and 369,369 ETB.");
+    return false;
+  }
+  return true;
+}
+</script>
+
+
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invest with CrystEdge</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="crystedge.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo-group">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <div class="logo-text">
+        <div class="brand-name">CRYSTEDGE</div>
+        <div class="brand-sub">INVESTMENTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#strategy">Strategy</a>
+      <a href="login.html" class="btn login-btn">Login</a>
+    </nav>
+  </div>
+</header>
+<!-- Invest Section -->
+<section class="invest" id="invest">
+  <div class="container">
+    <h2 data-aos="fade-up">Invest With CrystEdge</h2>
+    <p class="invest-intro" data-aos="fade-up" data-aos-delay="100">
+      Become a shareholder in Ethiopia’s first hedge fund. When you invest with CrystEdge, you earn equity in a global financial company with real performance and strong governance.
+    </p>
+
+    <div class="invest-steps">
+      <div class="step" data-aos="fade-right" data-aos-delay="200">
+        <h3>Step 1: Review Proposal</h3>
+        <p>Understand our strategy, risk management, and expected returns from our official hedge fund proposal.</p>
+        <a href="crystedge investments proposal.pdf" class="btn outline" download>Download Proposal</a>
+      </div>
+
+      <div class="step" data-aos="fade-right" data-aos-delay="300">
+        <h3>Step 2: Fill Investor Form</h3>
+        <p>Submit your details and desired investment amount.</p>
+        <form class="invest-form" action="https://formspree.io/f/xnnzbkgn" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="number" id="amount" name="amount" placeholder="Investment Amount (ETB) 1000-369,000" required>
+          <textarea name="message" placeholder="Your Message or Questions"></textarea>
+          <button type="submit" class="btn gold">Submit Application</button>
+        </form>
+
+      </div>
+      <div class="step" data-aos="fade-right" data-aos-delay="400">
+        <h3>Step 3: Get Approved</h3>
+        <p>Our team will review and reach out with confirmation, onboarding steps, and access to our investor dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 CrystEdge Investments. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
+
+<script>
+function validateForm() {
+  const amount = parseInt(document.getElementById("amount").value);
+  if (amount < 1000 || amount > 369369) {
+    alert("Investment amount must be between 1,000 ETB and 369,369 ETB.");
+    return false;
+  }
+  return true;
+}
+</script>
+
+
+</body>
+</html>
+>>>>>>> 2773ed52ebd95bb90c1abbc493ed0abfc196246d
