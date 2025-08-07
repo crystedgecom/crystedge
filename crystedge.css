@@ -53,11 +53,7 @@ img {
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-@media (max-width: 768px) {
-  .header {
-    position: sticky;
-  }
-}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -690,6 +686,67 @@ html, body {
 }
 @media (max-width: 768px) {
   .hero {
-    margin-top: 0; /* Removes the gap on phones */
+    margin-top: 10px; /* Removes the gap on phones */
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0b1f36;
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  /* Resize logo and text */
+  .logo-img {
+    max-width: 35px;
+    height: 35px;
+  }
+  /* Initially fixed at top */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.9s ease;
+  }
+
+  /* Hidden state */
+  .header.hide-on-scroll {
+    top: -100px; /* Hide it smoothly */
+  }
+}
+
+@media (max-width: 768px) {
+  #invest-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: o;
+    z-index: 1000;
+    transition: top 0.9s ease;
+  }
+
+  #invest-header.unfixed {
+    top: -100px;
+  }
+
+ 
+}
+.invest {
+    margin-top: 80px; /* Removes the gap on phones */
+  }
+
+@media (max-width: 768px) {
+  .invest {
+    margin-top: 10px; /* Removes the gap on phones */
   }
 }

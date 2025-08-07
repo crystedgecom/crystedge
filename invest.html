@@ -12,8 +12,9 @@
 <body>
 
 <!-- Header -->
-<header class="header">
+<header class="header" id="invest-header">
   <div class="container nav-container">
+    <!-- your logo and nav -->
     <div class="logo-group">
       <img src="logo.png" alt="Logo" class="logo-img" />
       <div class="logo-text">
@@ -52,7 +53,7 @@
     </p>
 
     <div class="invest-steps">
-      <div class="step" data-aos="fade-right" data-aos-delay="200">
+       <div class="step" id="step1" data-aos="fade-right" data-aos-delay="200">
         <h3>Step 1: Review Proposal</h3>
         <p>Understand our strategy, risk management, and expected returns from our official hedge fund proposal.</p>
         <a href="crystedge investments proposal.pdf" class="btn outline" download>Download Proposal</a>
@@ -135,6 +136,29 @@ function toggleMenu() {
     }
   });
 </script>
+
+<script>
+  const header = document.getElementById("invest-header");
+  const step1 = document.getElementById("step1");
+
+  function checkHeader() {
+    if (window.innerWidth <= 768) {
+      const stepTop = step1.getBoundingClientRect().top;
+      if (stepTop <= 80) {
+        // Reached Step 1, unfix header
+        header.classList.add("unfixed");
+      } else {
+        // Before Step 1, keep header fixed
+        header.classList.remove("unfixed");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", checkHeader);
+  window.addEventListener("resize", checkHeader);
+  window.addEventListener("load", checkHeader);
+</script>
+
 
 
 </body>

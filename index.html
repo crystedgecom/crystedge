@@ -168,8 +168,8 @@
   <footer class="footer" id="contact">
     <div class="container">
       <h2 data-aos="fade-up">Get In Touch</h2>
-      <p>Email us: <a href="mailto:crystedgeinvestments@gmail.com">crystedgeinvestments.com</a></p>
-      <p>Phone: +251 912 345 678</p>
+      <p>Email us: <a href="mailto:cristegeinvestment@gmail.com">cristegeinvestment@gmail.com</a></p>
+      <p>Phone: +251 988750530</p>
       <p>© 2025 CrystEdge Investments. All rights reserved.</p>
     </div>
   </footer>
@@ -193,6 +193,30 @@ function toggleMenu() {
 }
 </script>
 
+
+<script>
+  const header = document.querySelector(".header");
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  let lastScrollY = 0;
+
+  window.addEventListener("scroll", () => {
+    if (!isMobile()) return; // Only for phones
+
+    if (window.scrollY > document.querySelector(".hero").offsetHeight - 100) {
+      // After hero — hide header
+      header.classList.add("hide-on-scroll");
+    } else {
+      // Inside hero — show header
+      header.classList.remove("hide-on-scroll");
+    }
+
+    lastScrollY = window.scrollY;
+  });
+</script>
 
 
 </body>
