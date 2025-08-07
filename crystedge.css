@@ -678,6 +678,7 @@ html, body {
   max-width: 100%;
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -725,6 +726,7 @@ html, body {
   }
 }
 
+
 @media (max-width: 768px) {
   #invest-header {
     position: fixed;
@@ -734,6 +736,7 @@ html, body {
     z-index: 1000;
     transition: top 0.9s ease;
   }
+
 
   #invest-header.unfixed {
     top: -100px;
