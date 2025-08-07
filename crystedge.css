@@ -37,23 +37,22 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* === Header === */
+/*header*/
 .header {
-  background:#0b1f36;
+  background: #0b1f36;
   padding: 1rem 0;
-  position: sticky;
+  position: fixed;   /* always fixed */
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -517,43 +516,175 @@ img {
   font-size: 0.95rem;
   width: 100%;
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.plan-card {
-  width: 100%;
-  max-width: 280px;
-}
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: #fff;
-  cursor: pointer;
-}
-
+/* ===== MOBILE FIXES ===== */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  /* Header layout */
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  /* Hide desktop nav & show menu button */
   .nav {
     display: none;
     flex-direction: column;
-    background: #121212;
+    background: #0b1f36;
+    position: absolute;
+    top: 70px;
+    right: 0;
     width: 100%;
+    padding: 1rem 0;
   }
+
   .nav.show {
     display: flex;
   }
+
+  /* Mobile menu button */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #ffd700;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Adjust dropdown for touch */
+  .dropdown-content {
+    position: relative;
+    min-width: 100%;
+    box-shadow: none;
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Plan cards full width */
+  .plan-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .plan-card {
+    width: 100%;
+  }
+
+  /* Risk grid stacked */
+  .risk-grid {
+    flex-direction: column;
+  }
+
+  /* Team grid stacked */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer text smaller */
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #ffd700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Push to right */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #0b1f36;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  }
+}
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #ffd700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Push to right */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #0b1f36;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  }
+}
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+.hero {
+  margin-top: 80px; /* Adjust this value as needed */
 }
 @media (max-width: 768px) {
-  .feature-grid, .risk-grid, .plan-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
+  .hero {
+    margin-top: 0; /* Removes the gap on phones */
   }
 }
