@@ -53,6 +53,11 @@ img {
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+  }
+}
 .nav-container {
   display: flex;
   justify-content: space-between;
